@@ -1,0 +1,85 @@
+---
+title: "Cross Country Skiing at Blueberry Lake | Warren, VT Ski Trails"
+description: "Discover Vermont's premier cross country skiing destination at Blueberry Lake. 11 scenic trails, dog-friendly routes, and season passes available. Ski the Mad River Valley!"
+permalink: 'shop/'
+eleventyNavigation:
+    key: 'Shop Passes'
+    order: 300
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/shop.css">
+{% endblock %}
+
+{% block body %}
+   
+<!-- ============================================ -->
+    <!--                   Banner                     -->
+    <!-- ============================================ -->
+
+    <div id="banner-1400">
+        <div class="cs-container">
+            <span class="cs-int-title">About</span>
+        </div>
+        <!--Background Image-->
+        <picture class="cs-background">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/snowy-trees.jpg" | resize({width: 750, height: 820}) | webp %}">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/snowy-trees.jpg" | resize({width: 2018, height: 916, position: "attention" }) | webp %}">
+            <img decoding="async" src="{% getUrl "/assets/images/snowy-trees.jpg" | resize({width: 2018, height: 916, position: "attention" }) | webp %}" alt="Frosty Line of trees" aria-hidden="true">
+        </picture>
+    </div>
+
+    <!-- ============================================ -->
+    <!--                    Stats                     -->
+    <!-- ============================================ -->
+
+    <section id="sbs-297">
+        <div class="cs-container">
+            <!-- Left Image Section -->
+            <div class="cs-image-group">
+                <!--Floating Box-->
+                <div class="cs-box">
+                    <span class="cs-number">30+</span>
+                    <span class="cs-desc">Kilometers of Trails</span>
+                    <!--Background image for cs-box-->
+                    <picture class="cs-box-picture">
+                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/snowy-trees.jpg" | resize({width: 404, height: 404, position: "bottom" }) | webp %}"/>
+                        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/snowy-trees.jpg" | resize({width: 404, height: 404, position: "bottom" }) | webp %}"/>
+                        <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/snowy-trees.jpg" | resize({width: 404, height: 404, position: "bottom" }) | webp %}" alt="Frosty line of trees" aria-hidden="true"/>
+                    </picture>
+                </div>
+                <!--Big Background Image-->
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/shop-xc.jpg" | resize({width: 686, height: 760, position: "bottom" }) | webp %}"/>
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/shop-xc.jpg" | resize({width: 818, height: 1060, position: "bottom" }) | webp %}"/>
+                    <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/shop-xc.jpg" | resize({width: 818, height: 1060, position: "bottom" }) | webp %}" alt="Cross country skier in the distance." aria-hidden="true"/>
+                </picture>
+            </div>
+            <!-- Right Content Section-->
+            <div class="cs-content">
+                <span class="cs-topper">Skiing in a Winter Wonderland</span>
+                <h2 class="cs-title">Blueberry Lake Cross Country Ski Center</h2>
+                <p class="cs-text">
+                    Blueberry Lake Cross Country Center, nestled in the scenic Mad River Valley of East Warren, Vermont, offers a serene and immersive outdoor experience for winter enthusiasts. Our 35 kilometers of meticulously groomed trails cater to classic skiing, skate skiing, snowshoeing, and fat biking, accommodating all skill levels. The network features both wooded paths and open meadows, providing breathtaking views of the surrounding landscape.
+                </p>
+                <p class="cs-text">
+                    In light of recent transitions, we are focusing on providing season passes for the upcoming season. While the lodge will not be fully operational this year, our commitment to maintaining the quality and accessibility of our trails remains steadfast. We encourage visitors to plan accordingly, as on-site amenities will be limited. The lodge will be open for use of the restrooms, but <strong>equipment rentals will only be available during peak holiday weekends and by appointment</strong>.
+                </p>
+                <p class="cs-text">
+                    We welcome well-behaved dogs on our trails; please ensure they are under control and that you clean up after them.
+                </p>
+                <p class="cs-text">
+                    For the latest trail conditions and updates, please refer to our TrailHub App, which provides real-time geolocation tracking on our GPS-mapped trails. We highly recommend downloading the app and loading the Blueberry Lake Cross Country trail system onto your mobile device for the most current information.
+                </p>
+                <p class="cs-text">
+                    We appreciate your understanding during this period of transition and look forward to providing you with a memorable outdoor experience at Blueberry Lake Cross Country Center.
+                </p>
+                <a class="cs-button-solid" aria-label="learn more about our programs" href="/index#pricing-1386">Buy Now</a >
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,37 @@
+---
+title: "Cross Country Skiing at Blueberry Lake | Warren, VT Ski Trails"
+description: "Discover Vermont's premier cross country skiing destination at Blueberry Lake. 11 scenic trails, dog-friendly routes, and season passes available. Ski the Mad River Valley!"
+permalink: 'trails/'
+eleventyNavigation:
+    key: 'Trail Maps'
+    order: 200
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/trails.css">
+{% endblock %}
+
+{% block body %}
+    <!-- ============================================ -->
+    <!--                   Banner                     -->
+    <!-- ============================================ -->
+
+    <div id="banner-1400">
+        <div class="cs-container">
+            <span class="cs-int-title">Trail Maps</span>
+        </div>
+        <!--Background Image-->
+        <picture class="cs-background">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/snowy-trees.jpg" | resize({width: 750, height: 820}) | webp %}">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/snowy-trees.jpg" | resize({width: 2018, height: 916, position: "attention" }) | webp %}">
+            <img decoding="async" src="{% getUrl "/assets/images/snowy-trees.jpg" | resize({width: 2018, height: 916, position: "attention" }) | webp %}" alt="Frosty Line of trees" aria-hidden="true">
+        </picture>
+    </div>
+
+    <section><iframe width="100%" height="550" src="https://trailhub.org/ts/TREDc9fyvGW6a3QQU1ya/hybrid/embed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></section>
+
+{% endblock %}

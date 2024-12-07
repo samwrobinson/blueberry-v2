@@ -1,388 +1,227 @@
 ---
-title: 'Pixel Perfect Websites | Code Stitch Web Designs | Denver, CO'
-description: 'Meta description for the page'
-preloadImg: '/assets/images/landing.jpg'
+title: "Blueberry Lake Cross Country Skiing | Vermont Nordic Ski Center"
+description: "Experience 35km of groomed cross country skiing trails at Blueberry Lake in Warren, VT. Classic skiing, skate skiing, and snowshoe trails for all skill levels in Mad River Valley."
 permalink: '/'
-tags: 'sitemap' # Sitemap will use all pages in content/, due to content.json. As index.html is not included in content/ we need to manually add the sitemap tag to this page (only).
 eleventyNavigation:
-  key: Home
-  order: 100
+    key: 'Home'
+    order: '100'
 ---
 
-{% extends "layouts/base.html" %}
-
 {% block head %}
-    <link rel="stylesheet" href="/assets/css/local.css"/>
-    <link rel="stylesheet" href="/assets/css/critical.css"/>
-
-    <!-- Script for Netlify Identity -->
-    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script defer>
-        if (window.netlifyIdentity) {
-            window
-                .netlifyIdentity
-                .on('init', (user) => {
-                    if (!user) {
-                        window
-                            .netlifyIdentity
-                            .on('login', () => {
-                                document.location.href = '/admin/';
-                            });
-                    }
-                });
-        }
-    </script>
-
-    <!-- JSON Schema Markup -->
-    <script type="application/ld+json">
-        {
-            "@context": "http://schema.org",
-            "@type": "LocalBusiness",
-            "name": "{{ client.name }}",
-            {% if preloadImg %}"image": "{{ preloadImg }}",{% endif %}
-            {% if client.phoneFormatted %}"telephone": "{{ client.phoneFormatted }}",{% endif %}
-            {% if client.email %}"email": "{{ client.email }}",{% endif %}
-            {% if client.address %}
-                "address": {
-                    "@type": "PostalAddress"{% if client.address.lineOne %},
-                        "streetAddress": "{{ client.address.lineOne }}{% if client.address.lineTwo %}, {{ client.address.lineTwo }}{% endif %}"
-                    {% endif %}
-                    {% if client.address.city %},
-                        "addressLocality": "{{ client.address.city }}"
-                    {% endif %}
-                    {% if client.address.state %},
-                        "addressRegion": "{{ client.address.state }}"
-                    {% endif %}
-                    {% if client.address.zip %},
-                        "postalCode": "{{ client.address.zip }}"
-                    {% endif %}
-                    {% if client.address.country %},
-                        "addressCountry": "{{ client.address.country }}"
-                    {% endif %}
-                },
-            {% endif %}
-            {% if client.domain and page.url %}"url": "{{ client.domain }}{{ page.url }}",{% endif %}
-            {% if client.socials %}
-                "sameAs": [{% for platform, url in client.socials %}
-                        {% if not loop.first %},{% endif %}
-                        "{{ url }}"
-                    {% endfor %}]
-            {% endif %}
-        }
-    </script>
+    <link rel="stylesheet" href="/assets/css/critical.css">
 {% endblock %}
 
+{% extends 'layouts/base.html' %}
+
 {% block body %}
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
 
-    <!-- ============================================ -->
-    <!--                    Hero                      -->
-    <!-- ============================================ -->
-
-    <section id="hero">
-        <div class="cs-container">
-            <div class="cs-flex-group">
-                <span class="cs-topper">mountain hiking society</span>
-                <h1 class="cs-title">Explore the World with Exciting People</h1>
-                <p class="cs-text">
-                    Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius. Nibh tortor id aliquet lectus proin nibh condimentum.
-                </p>
-                <a href="/about" class="cs-button-solid">Explore More</a>
-                <a href="/contact" class="cs-button-transparent">
-                    <img
-                    class="cs-img"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Hero/play.svg"
-                    alt="play icon"
-                    width="17"
-                    height="17"/>
-                    Get in Touch
+<section id="hero-229">
+    <div class="cs-container">
+        <div class="cs-flex-group">
+            <span class="cs-topper">Welcome to</span>
+            <h1 class="cs-title">Blueberry Lake Cross Country Ski Center</h1>
+            <p class="cs-text">
+                Located in the Mad River Valley, East Warren, Vermont.
+            </p>
+            <div class="cs-button-group">
+                <a href="/index#pricing-1386" class="cs-button-solid cs-button">Shop Passes</a>
+                <a href="https://www.youtube.com/watch?v=GmevGrbJUj4&t=1s" target="_blank" class="cs-button-transparent cs-button">
+                    <img class="cs-img" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Hero/play.svg" alt="play icon" width="17" height="17">
+                    Learn More
                 </a>
             </div>
         </div>
+    </div>
 
-        <!-- Background Image -->
-        <picture class="cs-picture">
-            <source media="(max-width: 600px)" srcset="/assets/images/landing-m.webp">
-            <source media="(min-width: 601px)" srcset="/assets/images/landing.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/landing.jpg" alt="new home" width="2500" height="1667" loading="eager">
-        </picture>
-    </section>
+    <!-- Background Image -->
+    <picture class="cs-picture">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/blueberry-hero.jpeg" | resize({width: 750, height: 1422}) | webp %}">
+        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/blueberry-hero.jpeg" | resize({width: 2048, height: 1966}) | webp %}">
+        <img loading="lazy" decoding="async" src="/assets/iamges/blueberry-hero.jpeg" alt="mountains" width="2250" height="1500" aria-hidden="true">
+    </picture>
+</section>
 
-    <!-- ============================================ -->
-    <!--                  Services                    -->
-    <!-- ============================================ -->
+<!-- ============================================ -->
+<!--                  Pricing                     -->
+<!-- ============================================ -->
 
-    <section id="services" class="services">
-        <!-- Get Icons From flaticon.com -->
-        <div class="card">
-            <picture>
-                <img
-                aria-hidden="true"
-                decoding="async"
-                src="/assets/svgs/service1.svg"
-                alt="appliance"
-                width="48"
-                height="48"/>
-            </picture>
-            <h2>Service 1</h2>
-            <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
-        </div>
-        <div class="card">
-            <picture>
-                <img
-                aria-hidden="true"
-                decoding="async"
-                src="/assets/svgs/service2.svg"
-                alt="appliance"
-                width="48"
-                height="48"/>
-            </picture>
-            <h2>Service 2</h2>
-            <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
-        </div>
-        <div class="card">
-            <picture>
-                <img
-                aria-hidden="true"
-                decoding="async"
-                src="/assets/svgs/service3.svg"
-                alt="appliance"
-                width="48"
-                height="48"/>
-            </picture>
-            <h2>Service 3</h2>
-            <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                 Side By Side                 -->
-    <!-- ============================================ -->
-
-    <section id="sbs">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-left">
-                <picture class="cs-picture cs-picture1">
-                    <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="cabinets" loading="lazy" width="400" height="563">
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <source media="(max-width: 600px)" srcset="/assets/images/construction-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/construction.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/construction.jpg" alt="house" loading="lazy" width="400" height="563">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-right">
-                <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">About Company Title</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <div class="cs-flex-group">
-                    <p class="cs-flex-p">
-                        In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.
-                    </p>
-                    <span class="cs-name">Justin Time</span>
-                    <span class="cs-job">CEO-Founder</span>
-                    <img 
-                    class="cs-quote-icon"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg"
-                    alt="gavel"
-                    width="136"
-                    height="77"/>
-                </div>
-                <a href="/about" class="cs-button-solid">More About Us</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--            Extra Content To Rank             -->
-    <!-- ============================================ -->
-
-    <section id="sbs-r">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-left">
-                <picture class="cs-picture cs-picture1">
-                    <source media="(max-width: 600px)" srcset="/assets/images/construction-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/construction.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/construction.jpg" alt="house" loading="lazy" width="400" height="560">
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="cabinets" loading="lazy" width="400" height="560">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-right">
-                <span class="cs-topper">SEO Ranking</span>
-                <h2 class="cs-title">Talk about a main service keyword</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <p class="cs-text">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non tenetur, iure nihil ipsam qui atque commodi id voluptatem nesciunt, quis animi fuga cum doloribus! Eaque laboriosam, unde consectetur iure asperiores ullam. Consequuntur debitis a voluptatibus vitae optio autem explicabo quia neque est quas, in placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus modi laudantium voluptatibus rem libero error minus quia eligendi sapiente eos.
-                </p>
-                <a href="/blog" class="cs-button-solid">Read our Blog</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                   Gallery                    -->
-    <!-- ============================================ -->
-
-    <section id="gallery">
-        <div class="cs-container">
-            <span class="cs-topper">Our Portfolio</span>
-            <h2 class="cs-title">Et orci volutpat, back up generator installations</h2>
-            <div class="cs-image-group">
-                <!-- Row 1-->
-                <div class="cs-row cs-row-1">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <picture class="cs-picture cs-picture1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port1-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port1.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port1.jpg" alt="new hallway" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port4-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port4.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port4.jpg" alt="new home construction" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port7-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port7.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port7.jpg" alt="building a new wall" loading="lazy" width="400" height="560">
-                    </picture>
-                </div>
-                <!-- Row 2 -->
-                <div class="cs-row cs-row-2">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <picture class="cs-picture cs-picture1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port2-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port2.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port2.jpg" alt="new kitchen" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port5-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port5.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port5.jpg" alt="apartment addition" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port8-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port8.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port8.jpg" alt="kew kitchen cabinets" loading="lazy" width="400" height="560">
-                    </picture>
-                </div>
-                <!-- Row 3 -->
-                <div class="cs-row cs-row-3">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <picture class="cs-picture cs-picture1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port3-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port3.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port3.jpg" alt="new kitchen" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port6-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port6.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port6.jpg" alt="apartment addition" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port9-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port9.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port9.jpg" alt="kew kitchen cabinets" loading="lazy" width="400" height="560">
-                    </picture>
-
-                </div>
-            </div>
-            <a href="/projects" class="cs-button-solid">View Full Gallery</a>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                   Reviews                    -->
-    <!-- ============================================ -->
-
-    <section id="reviews">
-        <div class="cs-container">
-            <span class="cs-topper">Our Reviews</span>
-            <h2 class="cs-title">Words From Our Customers</h2>
+<section id="pricing-1386">
+    <picture class="cs-bg">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/topo.png" | resize({width: 375, height: 667}) | webp({quality: 50}) %}">
+        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/topo.png" | resize({width: 1415, height: 722}) | webp %}">
+        <img decoding="async" src="{% getUrl "/assets/images/topo.png" | resize({width: 1415, height: 722}) | webp %}" alt="pancake" aria-hidden="true">
+    </picture>
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Season Passes</span>
+            <h2 class="cs-title">Get Your Pass Today!</h2>
             <p class="cs-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit dolor volutpat porttitor sagittis nunc nisl. Sagittis sit pellentesque gravida viverra. Leo ut sed euismod tortor risus et. Ornare non neque, leo, ornare. Lorem ipsum dolor sit amet.
+                This season, Blueberry Lake Cross Country Skiing is undergoing an important period of transition. As such, we will exclusively offer season passes & day passes for our visitors.           
             </p>
-            <ul class="cs-card-group">
-                <!-- Review 1 -->
-                <li class="cs-item">
-                    <img
-                    class="cs-item-img"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile5.png"
-                    alt="profile picture"
-                    width="80"
-                    height="80"/>
-                    <p class="cs-item-p">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
-                    </p>
-                    <span class="cs-reviewer">
-                        Jon Doe
-                        <span class="cs-desc">Homeowner</span>
+            <p class="cs-text">
+                The lodge will remain open for visitor use, including restroom access, but will not be regularly staffed. <strong>This means that equipment rentals will not be available on a regular basis</strong>. While not regularly staffed, you can easily purchase tickets through our virtual payment system (via QR codes posted on-site) or online before your visit. Full service of the lodge, including staffing and equipment rentals will be available during holiday periods and by appointment.
+            </p>
+            <p class="cs-text">
+                We’re excited to maintain access to our trails, which will remain open 7 days a week for skiing, snowshoeing, and more.
+            </p>
+            <p class="cs-text">
+                We appreciate your understanding and continued support as we navigate these changes and work toward an even brighter future for our community of outdoor enthusiasts.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <div class="cs-flex">
+                    <span class="cs-package">Season Pass</span>
+                    <span class="cs-price">
+                        $210
+                        <span class="cs-duration">/Season</span>
                     </span>
-                    <img
-                    class="cs-item-stars"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
-                    alt="stars"
-                    width="96"
-                    height="16"/>
+                </div>
+                <div class="cs-info">
+                    <a href="https://square.link/u/heBHNYgj?src=sheet" target="_blank" class="cs-button-transparent">Buy Now!</a>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-flex">
+                    <span class="cs-package">Senior <br> Season Pass (65+)</span>
+                    <span class="cs-price">
+                        $175
+                        <span class="cs-duration">/Season</span>
+                    </span>
+                </div>
+                <div class="cs-info">
+                    <a href="https://square.link/u/yuU9SKKs?src=sheet" target="_blank" class="cs-button-transparent">Buy Now!</a>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-flex">
+                    <span class="cs-package">Family <br> Season Pass</span>
+                    <span class="cs-price">
+                        $350
+                        <span class="cs-duration">/Season</span>
+                    </span>
+                </div>
+                <div class="cs-info">
+                    <a href="https://square.link/u/MzKs9TiW?src=sheet" target="_blank" class="cs-button-transparent">Buy Now!</a>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-flex">
+                    <span class="cs-package">Day Pass</span>
+                    <span class="cs-price">
+                        $22
+                        <span class="cs-duration">/Day</span>
+                    </span>
+                </div>
+                <div class="cs-info">
+                    <a href="/collection/frontpage/" class="cs-button-transparent">Buy Now!</a>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-flex">
+                    <span class="cs-package">Senior <br> Day Pass (65+)</span>
+                    <span class="cs-price">
+                        $17
+                        <span class="cs-duration">/day</span>
+                    </span>
+                </div>
+                <div class="cs-info">
+                    <a href="https://square.link/u/V18Z7eF3?src=sheet" target="_blank" class="cs-button-transparent">Buy Now!</a>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-flex">
+                    <span class="cs-package">Youth <br> Day Pass (7 - 16yr/olds)</span>
+                    <span class="cs-price">
+                        $17
+                        <span class="cs-duration">/day</span>
+                    </span>
+                </div>
+                <div class="cs-info">
+                    <p>Kids 6 and under ski for free!</p>
+                    <a href="https://square.link/u/Nyu1U6Ni?src=sheet" target="_blank" class="cs-button-transparent">Buy Now!</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+<!-- ============================================ -->
+<!--                Side By Side                  -->
+<!-- ============================================ -->
+
+<section id="sbs-1640">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Skiing at Blueberry lake</span>
+            <h2 class="cs-title">Located in the Mad River Valley, Vermont</h2>
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/sbs-1.jpeg" | resize({width: 686, height: 840}) | webp %}">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/sbs-1.jpeg" | resize({width: 914, height: 1400}) | webp %}">
+                <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/sbs-1.jpeg" | resize({width: 914, height: 1400}) | webp %}" alt="Trail at Blueberry Lake">
+            </picture>
+        </div>
+        <div class="cs-stats-group">
+            <p class="cs-text">
+                Discover the warmth and charm of our sheltered trails! With 35 kilometers across 11 trails, you can enjoy classic skiing, skating, snowshoeing, and even fat biking. From beginner-friendly paths to expert-level routes, our trails offer something for everyone. Wander through serene wooded areas or glide through wide-open meadows with breathtaking views.
+            </p>
+            <p class="cs-text">
+                Bring the whole family along! And for those with four-legged friends, well-behaved dogs are welcome—just be sure to clean up after them!
+            </p>
+            <p class="cs-text">
+                Come and explore, play, and make lasting memories on our trails.
+            </p>
+            <ul class="cs-stats">
+                <li class="cs-stat">
+                    <span class="cs-number">44</span>
+                    <span class="cs-desc">Years in Business</span>
                 </li>
-                <!-- Review 2 -->
-                <li class="cs-item">
-                    <img
-                    class="cs-item-img"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile-4.png"
-                    alt="profile picture"
-                    width="80"
-                    height="80"/>
-                    <p class="cs-item-p">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
-                    </p>
-                    <span class="cs-reviewer">
-                        Jane Doe
-                        <span class="cs-desc">Homeowner</span>
-                    </span>
-                    <img
-                    class="cs-item-stars"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
-                    alt="stars"
-                    width="96"
-                    height="16"/>
+                <li class="cs-stat">
+                    <span class="cs-number">35</span>
+                    <span class="cs-desc">Kilometers of Trails</span>
+                </li>
+                <li class="cs-stat">
+                    <span class="cs-number">7</span>
+                    <span class="cs-desc">Days a Week</span>
                 </li>
             </ul>
-            <a aria-label="read more reviews" href="/reviews" class="cs-button-solid">Our Reviews</a>
         </div>
-    </section>
+    </div>
+</section>
+                                
+<!-- ============================================ -->
+<!--              Side By Side Reverse            -->
+<!-- ============================================ -->
 
-    {% include 'components/cta.html' %}
+<section id="sbsr-1279">
+    <div class="cs-container">
+        <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/trails.jpeg" | resize({width: 686, height: 912}) | webp %}">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/trails.jpeg" | resize({width: 984, height: 942}) | webp %}">
+            <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/trails.jpeg" | resize({width: 984, height: 942}) | webp %}" alt="Skate Skier going uphill.">
+        </picture>
+        <div class="cs-content">
+            <div class="cs-flex">
+                <span class="cs-topper">Get to Know our Trails</span>
+                <h2 class="cs-title">First Time Visiting?</h2>
+            </div>
+            <p class="cs-text">
+                Click below to learn more about our trails. We offer digital downloads of our maps or virtual browsing right here through TrailForks.
+            </p>
+            <a href="/trails" class="cs-button-solid">Learn More</a>
+        </div>
+    </div>
+    <div class="cs-background">
+    </div>
+</section>
+                                
+
 {% endblock %}
