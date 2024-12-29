@@ -1,6 +1,6 @@
 ---
 title: 12/29 Trail Report
-url: trail report
+url: trail-report-12-29
 description: Trails 1, 2, 3, and 9 are still skiable this morning
 author: Jen
 date: 2024-12-29T09:25:00.000Z
