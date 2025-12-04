@@ -47,30 +47,30 @@ const dropDowns = Array.from(document.querySelectorAll('#cs-navigation .cs-dropd
     }
 
     // your local storage reset for local testing. uncomment this command so you can still access you pop up after clicking the close or submit button.
-// localStorage.setItem('closed', 'false');
+localStorage.setItem('closed', 'false');
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     var CSmodal = document.getElementById('cs-modal-1605');
-//     var CScloseButton = document.getElementById('cs-close-1605');
-//     var CSsubmitButton = document.getElementById('cs-submit-1605');
-
-
-//     setTimeout(function() {
-//         CSmodal.classList.add('cs-loaded');
-//         CSmodal.style.zIndex = 12000; 
-//     }, 0);
-
-//     CScloseButton.addEventListener('click', function() {
-//         CSmodal.classList.add('cs-closed');
-//         CSmodal.classList.remove('cs-loaded');
-//         CSmodal.style.zIndex = -1000; 
+document.addEventListener('DOMContentLoaded', function() {
+    var CSmodal = document.getElementById('cs-modal-1605');
+    var CScloseButton = document.getElementById('cs-close-1605');
+    var CSsubmitButton = document.getElementById('cs-submit-1605');
 
 
-//     });
+    setTimeout(function() {
+        CSmodal.classList.add('cs-loaded');
+        CSmodal.style.zIndex = 12000; 
+    }, 0);
 
-//     CSsubmitButton.addEventListener('click', function() {
-//     });
-// });
+    CScloseButton.addEventListener('click', function() {
+        CSmodal.classList.add('cs-closed');
+        CSmodal.classList.remove('cs-loaded');
+        CSmodal.style.zIndex = -1000; 
+
+
+    });
+
+    CSsubmitButton.addEventListener('click', function() {
+    });
+});
   
     
                                 
