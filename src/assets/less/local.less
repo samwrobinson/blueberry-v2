@@ -963,3 +963,27 @@
         }
     }
 }
+
+/*-- -------------------------- -->
+<---    Pricing 1386 Override   -->
+<--- -------------------------- -*/
+
+/* Make first pricing card group 4 columns */
+@media only screen and (min-width: 48rem) {
+    #pricing-1386 {
+        .cs-card-group:first-of-type {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: clamp(1rem, 2.3vw, 1.25rem);
+
+            .cs-item {
+                padding: 0 (24/16rem) (24/16rem);
+            }
+
+            .cs-flex {
+                width: clamp(10rem, 20vw, 12rem);
+                height: clamp(10rem, 20vw, 12rem);
+            }
+        }
+    }
+}
