@@ -1,5 +1,5 @@
 ---
-title: trail conditions 1/5/25
+title: trail conditions 1/5/26
 url: trail report 1/5/26
 description: All trails groomed and in good shape. Most trails are tracked.
   Exceptons being 7, 8 and upper 6.
