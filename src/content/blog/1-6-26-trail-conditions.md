@@ -6,7 +6,7 @@ author: Renate
 date: 2026-01-06T09:26:00.000-05:00
 tags:
   - post
-image: /assets/images/blog/01.06.26.jpg
+image: /assets/images/blog/img_7900.jpeg
 imageAlt: 11 before the groomers
 ---
 Trail 11 was gorgeous
