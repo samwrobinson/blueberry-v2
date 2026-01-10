@@ -9,4 +9,4 @@ tags:
 image: /assets/images/blog/01.10.26.jpg
 imageAlt: Trail 1
 ---
-We survived the rain!  Conditions this morning are crusty, firm and fast.  We have been out breaking up the crust, and with warming temperatures the snow should soften.  Expect some debris on the trails from the wind last night.  We recommend staying away from trails 9, 8 , 7 and upper 6.
+We survived the rain!  Conditions this morning are crusty, firm and fast.  We have been out breaking up the crust, and with warming temperatures the snow should soften.  Expect some debris on the trails from the wind last night.  We recommend caution on trails 9, 8 , 7 and upper 6.
