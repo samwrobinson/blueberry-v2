@@ -1,7 +1,7 @@
 ---
 title: 01/30/26 Trail Conditions
 url: 01/30/26
-description: BBrrrrrrr.  Bundle up and protect open skin....but don't let the
+description: BBrrrrrrr.  Bundle up and protect exposed skin....but don't let the
   cold stop you from having a great ski.  Trails are wonderful, and you can stay
   warmer on the woods trails.  Afterwards, enjoy an Upland Coffee and Twisted
   Halo donut!!!!
