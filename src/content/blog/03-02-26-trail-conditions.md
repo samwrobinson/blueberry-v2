@@ -11,7 +11,7 @@ author: Renate
 date: 2026-03-02T09:35:00.000-05:00
 tags:
   - post
-image: /assets/images/blog/03.02.26.jpg
-imageAlt: Have you read Cross Country Cat on trail 1?
+image: /assets/images/blog/03.02.26-2-.jpeg
+imageAlt: 10 in the sunshine
 ---
 Can't beat the great feeling of sunshine on a crisp day!
