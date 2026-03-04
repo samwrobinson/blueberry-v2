@@ -676,8 +676,9 @@
     width: 100%;
     max-width: 85rem;
   }
-  /* First card group gets 4 columns */
-  #pricing-1386 .cs-container .cs-card-group:first-of-type {
+  /* First two card groups get 4 columns */
+  #pricing-1386 .cs-container .cs-card-group:first-of-type,
+  #pricing-1386 .cs-container .cs-card-group:nth-of-type(2) {
     grid-template-columns: repeat(4, 1fr);
   }
   #pricing-1386 .cs-item {
