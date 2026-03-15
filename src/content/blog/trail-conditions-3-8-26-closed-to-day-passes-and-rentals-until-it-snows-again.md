@@ -1,6 +1,6 @@
 ---
 title: Trail conditions 3/8/26 CLOSED to day passes and rentals until it snows again
-url: Blog Post
+url: Trail Conditions 3-8-26
 description: Head to the mountain or grab your bike. It's not a day for nordic skiing
 author: Jen
 date: 2026-03-08T09:00:00.000-04:00

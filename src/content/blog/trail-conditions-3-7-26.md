@@ -1,6 +1,6 @@
 ---
 title: Trail Conditions 3/7/26
-url: Blog Post
+url: Trail Conditions 3-7-26
 description: Mighty fine spring skiing today
 author: Jen
 date: 2026-03-07T09:13:00.000-05:00
