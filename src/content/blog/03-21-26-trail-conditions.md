@@ -1,10 +1,10 @@
 ---
 title: 03/21/26 Trail Conditions
 url: 03/21/26 Update
-description: 'Center closed.....looks may be deceiving.  Parts of trails are
-  looking good for skiing, however, there are stretches of solid ice below the
-  2" of fresh snow.  Caution advised, we recommend staying off of the hilly
-  trails.  1,2,3, and the field on the west side were groomed.  '
+description: Center closed.....looks may be deceiving.  While it may look ok to
+  ski, there are large areas of glare ice and roots under the snow.  Skiing
+  could be treacherous.  Please stay off hilly trails.  Field trails do not have
+  enough coverage.  Walking with either ice spikes or snowshoes would be ok.
 author: Renate
 date: 2026-03-21T08:35:00.000-04:00
 tags:
