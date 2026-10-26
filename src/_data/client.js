@@ -1,21 +1,21 @@
 module.exports = {
-    "name": "Code Stitch Web Designs",
-    "email": "help@codestitch.app",
+    "name": "Blueberry Lake Cross Country Ski Center",
+    "email": "",
     "phoneForTel": "802-496-6687",
     "phoneFormatted": "(802) 496-6687",
     "address": {
-        "lineOne": "First Address Line",
-        "lineTwo": "Second Address Line",
-        "city": "Denver",
-        "state": "CO",
-        "zip": "80206",
+        "lineOne": "424 Plunkton Road",
+        "lineTwo": "",
+        "city": "Warren",
+        "state": "VT",
+        "zip": "05674",
         "country": "US",
-        "mapLink": "https://maps.app.goo.gl/TEdS5KoLC9ZcULuQ6"
+        "mapLink": "https://www.google.com/maps/search/?api=1&query=424+Plunkton+Road+Warren+VT+05674"
     },
     "socials": {
         "facebook": "https://www.facebook.com/",
         "instagram": "https://www.instagram.com/",
     },
     //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
-    "domain": "https://www.example.com"
+    "domain": "https://blueberrylakexc.com"
 };

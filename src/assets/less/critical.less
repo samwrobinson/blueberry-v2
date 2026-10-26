@@ -720,6 +720,270 @@
 }
 
 /*-- -------------------------- -->
+<---   Season & Sauna Passes    -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  .cs-passes {
+      padding: var(--sectionPadding);
+      overflow: hidden;
+      background-color: #f7f7f7;
+      position: relative;
+      z-index: 1;
+  }
+  .cs-passes .cs-container {
+      width: 100%;
+      max-width: 80rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 32px - 48px */
+      gap: clamp(2rem, 4vw, 3rem);
+  }
+  .cs-passes .cs-content {
+      text-align: center;
+      width: 100%;
+      max-width: 46rem;
+      /* 24px - 40px */
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .cs-passes .cs-title {
+      text-wrap: balance;
+  }
+  .cs-passes .cs-card-group {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      /* 16px - 20px */
+      gap: clamp(1rem, 2.3vw, 1.25rem);
+  }
+  .cs-passes .cs-item {
+      list-style: none;
+      text-align: center;
+      padding: 2rem 1.5rem 1.5rem;
+      border-top: 4px solid var(--primary);
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .cs-passes .cs-package {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.25rem;
+      line-height: 1.2em;
+      font-weight: 700;
+      margin: 0;
+      color: var(--headerColor);
+  }
+  .cs-passes .cs-age {
+      font-family: "Poppins", sans-serif;
+      font-size: 0.875rem;
+      line-height: 1.5em;
+      /* keeps prices lined up when a card has no age */
+      min-height: 1.5em;
+      margin-bottom: 0.75rem;
+      color: var(--bodyTextColor);
+  }
+  .cs-passes .cs-price {
+      font-size: clamp(2.5rem, 4vw, 3rem);
+      line-height: 1;
+      font-weight: 900;
+      margin-bottom: 1.5rem;
+      color: var(--headerColor);
+      display: flex;
+      align-items: baseline;
+  }
+  .cs-passes .cs-duration {
+      font-family: "Poppins", sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      margin-left: 0.25rem;
+      color: var(--bodyTextColor);
+  }
+  .cs-passes .cs-item .cs-button-solid {
+      width: 100%;
+  }
+  .cs-passes .cs-sustainer {
+      width: 100%;
+      /* room for the tag that sits on the button's top edge */
+      margin-top: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      position: relative;
+  }
+  .cs-passes .cs-trail-tag {
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.6875rem;
+      line-height: 1.2em;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+      padding: 0.25rem 0.625rem;
+      color: #1a1a1a;
+      background-color: var(--primary);
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+  }
+  .cs-passes .cs-button-outline {
+      font-size: 1rem;
+      font-weight: 700;
+      /* matches .cs-button-solid height once the 2px borders are added */
+      line-height: calc(clamp(2.875rem, 5.5vw, 3.5rem) - 4px);
+      text-align: center;
+      text-decoration: none;
+      width: 100%;
+      padding: 0 1rem;
+      border: 2px solid var(--primary);
+      color: var(--headerColor);
+      background-color: #fff;
+      display: block;
+      transition: background-color 0.3s;
+  }
+  .cs-passes .cs-button-outline:hover {
+      background-color: var(--primary);
+  }
+  .cs-passes .cs-sustainer-note {
+      font-family: "Poppins", sans-serif;
+      font-size: 0.875rem;
+      line-height: 1.5em;
+      font-weight: 600;
+      color: var(--headerColor);
+  }
+  .cs-passes .cs-call-note {
+      margin-top: 0.5rem;
+  }
+  .cs-passes .cs-sustainer-intro {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e8e8e8;
+  }
+  .cs-passes .cs-sustainer-intro strong {
+      color: var(--headerColor);
+  }
+  .cs-passes .cs-sustainer-intro a {
+      font-weight: 700;
+      white-space: nowrap;
+      color: var(--headerColor);
+      text-decoration: underline;
+      text-decoration-color: var(--primary);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
+  }
+  .cs-passes .cs-sustainer-intro a:hover {
+      text-decoration-color: var(--headerColor);
+  }
+  .cs-passes .cs-day {
+      width: 100%;
+      /* 24px - 40px */
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+      background-color: #fff;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      align-items: center;
+  }
+  .cs-passes .cs-day .cs-h3 {
+      line-height: 1.2em;
+      margin: 0 0 0.25rem;
+      color: var(--headerColor);
+  }
+  .cs-passes .cs-day-list {
+      margin: 1rem 0 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      column-gap: 2rem;
+  }
+  .cs-passes .cs-day-list li {
+      font-family: "Poppins", sans-serif;
+      font-size: 1rem;
+      line-height: 1.5em;
+      list-style: none;
+      padding: 0.75rem 0;
+      border-bottom: 1px dashed #d9d9d9;
+      color: var(--bodyTextColor);
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+  }
+  .cs-passes .cs-day-price {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      white-space: nowrap;
+      color: var(--headerColor);
+  }
+  .cs-passes .cs-callout {
+      font-family: "Poppins", sans-serif;
+      font-size: 1rem;
+      line-height: 1.5em;
+      margin: 0;
+      padding: 1.25rem 1.5rem;
+      border-left: 4px solid var(--primary);
+      background-color: rgba(255, 186, 25, 0.15);
+      color: var(--headerColor);
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  .cs-passes .cs-card-group {
+      grid-template-columns: repeat(2, 1fr);
+  }
+  /* 2 columns would leave the third card on its own row */
+  .cs-passes .cs-card-group.cs-three {
+      max-width: 28rem;
+      grid-template-columns: 1fr;
+  }
+  .cs-passes .cs-day-list {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  .cs-passes .cs-card-group.cs-three {
+      max-width: 64rem;
+      grid-template-columns: repeat(3, 1fr);
+  }
+  .cs-passes .cs-day {
+      grid-template-columns: 3fr 2fr;
+      gap: 2.5rem;
+  }
+  /* list sits beside the callout, too narrow for 2 columns until 1280px */
+  .cs-passes .cs-day-list {
+      grid-template-columns: 1fr;
+  }
+}
+/* 1200px - cards are too narrow for the sustainer button below this */
+@media only screen and (min-width: 75rem) {
+  .cs-passes .cs-card-group:not(.cs-three) {
+      grid-template-columns: repeat(4, 1fr);
+  }
+  .cs-passes .cs-item {
+      padding-left: 1rem;
+      padding-right: 1rem;
+  }
+}
+/* Large Desktop - 1280px */
+@media only screen and (min-width: 80rem) {
+  .cs-passes .cs-day-list {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/*-- -------------------------- -->
 <---   Side By Side Reverse     -->
 <--- -------------------------- -*/
 

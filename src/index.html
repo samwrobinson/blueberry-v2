@@ -2,6 +2,7 @@
 title: "Blueberry Lake Cross Country Skiing | Vermont Nordic Ski Center"
 description: "Experience 35km of groomed cross country skiing trails at Blueberry Lake in Warren, VT. Classic skiing, skate skiing, and snowshoe trails for all skill levels in Mad River Valley."
 permalink: '/'
+tags: sitemap
 eleventyNavigation:
     key: 'Home'
     order: '100'
@@ -27,7 +28,7 @@ eleventyNavigation:
                 Located in the Mad River Valley, East Warren, Vermont. We offer seasons passes, day tickets, and <strong>ski and snowshoe rentals</strong> for all ages!
             </p>
             <div class="cs-button-group">
-                <a href="/index#pricing-1386" class="cs-button-solid cs-button">Shop Passes</a>
+                <a href="/#passes" class="cs-button-solid cs-button">Shop Passes</a>
                 <a href="https://www.youtube.com/watch?v=GmevGrbJUj4&t=1s" target="_blank" class="cs-button-transparent cs-button">
                     <img class="cs-img" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Hero/play.svg" alt="play icon" width="17" height="17">
                     About The Founder
@@ -45,170 +46,82 @@ eleventyNavigation:
 </section>
 
 <!-- ============================================ -->
-<!--                  Pricing                     -->
+<!--                Season Passes                 -->
 <!-- ============================================ -->
 
-<section id="pricing-1386">
+<section id="passes" class="cs-passes">
     <picture class="cs-bg">
         <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/topo.png" | resize({width: 375, height: 667}) | webp({quality: 50}) %}">
         <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/topo.png" | resize({width: 1415, height: 722}) | webp %}">
-        <img decoding="async" src="{% getUrl "/assets/images/topo.png" | resize({width: 1415, height: 722}) | webp %}" alt="pancake" aria-hidden="true">
+        <img decoding="async" src="{% getUrl "/assets/images/topo.png" | resize({width: 1415, height: 722}) | webp %}" alt="" aria-hidden="true">
     </picture>
     <div class="cs-container">
         <div class="cs-content">
             <span class="cs-topper">Season Passes</span>
-            <h2 class="cs-title">Buy Your 2026/27 Passes Now!</h2>
-            <p class="cs-text" style="font-size: 1.25rem; font-weight: bold;">
-                Lock in 25/26 pricing and ski with us for free for the rest of the season!
-            </p>
+            <h2 class="cs-title">2026/27 Season Passes Now Available</h2>
             <p class="cs-text">
-                Passes may be purchased online or in person. For online purchases, please stop by the ski center when the season opens to pick up your physical pass and give us a chance to put a face with the name.
+                Passes may be purchased online or in person. If you buy online, stop by the ski center when the season opens to pick up your physical pass and give us a chance to put a face with the name.
             </p>
-            <p class="cs-text">
-                We are also offering a Sustainer Level pass to help raise funds to begin undertaking trail improvement projects. When you buy a Sustainers Pass, every dollar <strong>above</strong> the regular season pass rate will go directly to trail improvements.
+            <p class="cs-text cs-sustainer-intro">
+                <strong>Want to help the trails?</strong> Choose a Sustainer pass. Every dollar above the regular season pass rate goes directly to trail improvements. <a href="/support/">Learn more</a>
             </p>
-            <p class="cs-text">
-                All minors who meet federal guidelines for free or reduced lunch ski free! Those 12 and under may bring an accompanying adult for free as well. Rentals will be made available at no cost when possible. When not free, ski and snowshoe rentals are available for $22/day.
-            </p>
-            <a href="/support/" class="cs-button-solid" style="margin-top: 1rem;">Learn More</a>
         </div>
         <ul class="cs-card-group">
             <li class="cs-item">
-                <div class="cs-flex">
-                    <span class="cs-package">Adult Day Pass</span>
-                    <span class="cs-price">
-                        $22
-                        <span class="cs-duration">/day</span>
-                    </span>
-                </div>
-                <div class="cs-info">
-                    <span class="cs-button-transparent">In Person Sale</span>
-                </div>
-            </li>
-            <li class="cs-item">
-                <div class="cs-flex">
-                    <span class="cs-package">Senior <br> Day Pass (65+)</span>
-                    <span class="cs-price">
-                        $18
-                        <span class="cs-duration">/day</span>
-                    </span>
-                </div>
-                <div class="cs-info">
-                    <span class="cs-button-transparent">In Person Sale</span>
+                <h3 class="cs-package">Individual</h3>
+                <span class="cs-age"></span>
+                <span class="cs-price">$250<span class="cs-duration">/season</span></span>
+                <a href="https://square.link/u/9YV5TduZ" target="_blank" class="cs-button-solid">Buy Now</a>
+                <div class="cs-sustainer">
+                    <span class="cs-trail-tag">Supports the trails</span>
+                    <a href="https://square.link/u/BhtoGs2c" target="_blank" class="cs-button-outline" aria-label="Buy Sustainer Individual Season Pass, $375">Sustainer Pass &middot; $375</a>
+                    <span class="cs-sustainer-note">$125 goes to trail improvements</span>
                 </div>
             </li>
             <li class="cs-item">
-                <div class="cs-flex">
-                    <span class="cs-package">Equipment Rentals</span>
-                    <span class="cs-price">
-                        $22
-                        <span class="cs-duration">/day</span>
-                    </span>
-                </div>
-                <div class="cs-info">
-                    <span class="cs-button-transparent">In Person Sale</span>
+                <h3 class="cs-package">Young Adult</h3>
+                <span class="cs-age">Under 27</span>
+                <span class="cs-price">$170<span class="cs-duration">/season</span></span>
+                <a href="https://square.link/u/6G0LQN2p" target="_blank" class="cs-button-solid">Buy Now</a>
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-package">Senior</h3>
+                <span class="cs-age">65+</span>
+                <span class="cs-price">$175<span class="cs-duration">/season</span></span>
+                <a href="https://square.link/u/OYlRcoWe" target="_blank" class="cs-button-solid">Buy Now</a>
+                <div class="cs-sustainer">
+                    <span class="cs-trail-tag">Supports the trails</span>
+                    <a href="https://square.link/u/G2Z2xvdk" target="_blank" class="cs-button-outline" aria-label="Buy Sustainer Senior Season Pass, $300">Sustainer Pass &middot; $300</a>
+                    <span class="cs-sustainer-note">$125 goes to trail improvements</span>
                 </div>
             </li>
             <li class="cs-item">
-                <div class="cs-flex">
-                    <span class="cs-package">Child (0-6) <br> Day Pass</span>
-                    <span class="cs-price">
-                        Free!
-                        <span class="cs-duration">/day</span>
-                    </span>
-                </div>
-                <div class="cs-info">
+                <h3 class="cs-package">Family</h3>
+                <span class="cs-age"></span>
+                <span class="cs-price">$350<span class="cs-duration">/season</span></span>
+                <a href="https://square.link/u/H8PL75fJ" target="_blank" class="cs-button-solid">Buy Now</a>
+                <div class="cs-sustainer">
+                    <span class="cs-trail-tag">Supports the trails</span>
+                    <a href="https://square.link/u/wsrHjdrW" target="_blank" class="cs-button-outline" aria-label="Buy Sustainer Family Season Pass, $500">Sustainer Pass &middot; $500</a>
+                    <span class="cs-sustainer-note">$150 goes to trail improvements</span>
                 </div>
             </li>
         </ul>
-        <ul class="cs-card-group">
-            <li class="cs-item">
-                <div class="cs-flex">
-                    <span class="cs-package">Individual Season Pass</span>
-                    <span class="cs-price">
-                        $250
-                        <span class="cs-duration">/Season</span>
-                    </span>
-                </div>
-                <div class="cs-info">
-                    <a href="https://square.link/u/9YV5TduZ" target="_blank" class="cs-button-transparent">Buy Now!</a>
-                </div>
-            </li>
-            <li class="cs-item">
-                <div class="cs-flex">
-                    <span class="cs-package">Young Adult <br> Season Pass (&lt;27)</span>
-                    <span class="cs-price">
-                        $170
-                        <span class="cs-duration">/Season</span>
-                    </span>
-                </div>
-                <div class="cs-info">
-                    <a href="https://square.link/u/6G0LQN2p" target="_blank" class="cs-button-transparent">Buy Now!</a>
-                </div>
-            </li>
-            <li class="cs-item">
-                <div class="cs-flex">
-                    <span class="cs-package">Senior <br> Season Pass (65+)</span>
-                    <span class="cs-price">
-                        $175
-                        <span class="cs-duration">/Season</span>
-                    </span>
-                </div>
-                <div class="cs-info">
-                    <a href="https://square.link/u/OYlRcoWe" target="_blank" class="cs-button-transparent">Buy Now!</a>
-                </div>
-            </li>
-            <li class="cs-item">
-                <div class="cs-flex">
-                    <span class="cs-package">Family <br> Season Pass</span>
-                    <span class="cs-price">
-                        $350
-                        <span class="cs-duration">/Season</span>
-                    </span>
-                </div>
-                <div class="cs-info">
-                    <a href="https://square.link/u/H8PL75fJ" target="_blank" class="cs-button-transparent">Buy Now!</a>
-                </div>
-            </li>
-        </ul>
-        <ul class="cs-card-group">
-            <li class="cs-item">
-                <div class="cs-flex">
-                    <span class="cs-package">Sustainers <br>Season Pass</span>
-                    <span class="cs-price">
-                        $375
-                        <span class="cs-duration">/Season</span>
-                    </span>
-                </div>
-                <div class="cs-info">
-                    <a href="https://square.link/u/BhtoGs2c" target="_blank" class="cs-button-transparent">Buy Now!</a>
-                </div>
-            </li>
-            <li class="cs-item">
-                <div class="cs-flex">
-                    <span class="cs-package">Sustainers Senior <br> Season Pass (65+)</span>
-                    <span class="cs-price">
-                        $300
-                        <span class="cs-duration">/Season</span>
-                    </span>
-                </div>
-                <div class="cs-info">
-                    <a href="https://square.link/u/G2Z2xvdk" target="_blank" class="cs-button-transparent">Buy Now!</a>
-                </div>
-            </li>
-            <li class="cs-item">
-                <div class="cs-flex">
-                    <span class="cs-package">Sustainers Family <br> Season Pass</span>
-                    <span class="cs-price">
-                        $500
-                        <span class="cs-duration">/Season</span>
-                    </span>
-                </div>
-                <div class="cs-info">
-                    <a href="https://square.link/u/wsrHjdrW" target="_blank" class="cs-button-transparent">Buy Now!</a>
-                </div>
-            </li>
-        </ul>
+        <div class="cs-day">
+            <div class="cs-day-prices">
+                <h3 class="cs-h3">Day Passes &amp; Rentals</h3>
+                <p class="cs-text">Pay at the ski center.</p>
+                <ul class="cs-day-list">
+                    <li><span>Adult day pass</span><span class="cs-day-price">$22</span></li>
+                    <li><span>Senior day pass (65+)</span><span class="cs-day-price">$18</span></li>
+                    <li><span>Child day pass (0-6)</span><span class="cs-day-price">Free</span></li>
+                    <li><span>Ski or snowshoe rental</span><span class="cs-day-price">$22/day</span></li>
+                </ul>
+            </div>
+            <p class="cs-callout">
+                All minors who meet federal guidelines for free or reduced lunch ski free! Those 12 and under may bring an accompanying adult for free as well. Rentals will be made available at no cost when possible.
+            </p>
+        </div>
     </div>
 </section>
 

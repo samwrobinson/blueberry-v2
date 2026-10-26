@@ -23,40 +23,45 @@
             <div class="cs-ul-wrapper">
                 <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
                     <li class="cs-li">
-                        <a href="/" class="cs-li-link cs-active">
+                        <a href="/" class="cs-li-link{% if page.url == '/' %} cs-active{% endif %}">
                             Home
                         </a>
                     </li>
                     <li class="cs-li">
-                        <a href="/about/" class="cs-li-link">
+                        <a href="/about/" class="cs-li-link{% if page.url == '/about/' %} cs-active{% endif %}">
                             About
                         </a>
                     </li>
                     <li class="cs-li">
-                        <a href="/support/" class="cs-li-link">
+                        <a href="/support/" class="cs-li-link{% if page.url == '/support/' %} cs-active{% endif %}">
                             Support
                         </a>
                     </li>
                     <li class="cs-li">
-                        <a href="/sauna/" class="cs-li-link">
+                        <a href="/sauna/" class="cs-li-link{% if page.url == '/sauna/' %} cs-active{% endif %}">
                             Sauna
                         </a>
                     </li>
                     <li class="cs-li">
-                        <a href="/blog" class="cs-li-link">
+                        <a href="/blog" class="cs-li-link{% if page.url.startsWith('/blog/') %} cs-active{% endif %}">
                             Trail Conditions
                         </a>
                     </li>
                     <li class="cs-li">
-                        <a href="/trails" class="cs-li-link">
+                        <a href="/trails" class="cs-li-link{% if page.url == '/trails/' %} cs-active{% endif %}">
                             Trail Maps
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/contact/" class="cs-li-link{% if page.url == '/contact/' %} cs-active{% endif %}">
+                            Contact
                         </a>
                     </li>
                 </ul>
             </div>
         </nav>
         <div class="cs-contact-group">
-            <a href="tel:+84 1985 33 999" class="cs-phone">
+            <a href="tel:{{ client.phoneForTel }}" class="cs-phone">
                 <img class="cs-phone-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/phone-1a.svg" alt="logo" width="24" height="24" aria-hidden="true" decoding="async">
                 (802) 496-6687
             </a>

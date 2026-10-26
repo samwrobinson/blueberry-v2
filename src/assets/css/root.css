@@ -836,6 +836,20 @@
   }
 }
 /* Large Desktop - 1300px */
+/* 7 links + phone overlap until ~1200px at the default gap */
+@media only screen and (min-width: 64rem) and (max-width: 79.9375rem) {
+  #cs-navigation .cs-logo {
+    width: auto;
+  }
+  /* sit in the flex row next to the phone instead of dead center */
+  #cs-navigation .cs-ul-wrapper {
+    position: static;
+    transform: none;
+  }
+  #cs-navigation .cs-ul {
+    gap: 1rem;
+  }
+}
 @media only screen and (min-width: 81.25rem) {
   #cs-navigation .cs-social {
     display: flex;

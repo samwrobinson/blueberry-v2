@@ -1,7 +1,6 @@
 ---
-title: 'Contact | Code Stitch Web Designs'
-description: 'Meta description for the page'
-preloadImg: '/assets/images/cabinets2.jpg'
+title: 'Contact | Blueberry Lake Cross Country Ski Center'
+description: 'Call (802) 496-6687 or send us a message. Blueberry Lake Cross Country Ski Center, 424 Plunkton Road, Warren, VT 05674.'
 permalink: 'contact/'
 eleventyNavigation:
     key: Contact Us
@@ -21,14 +20,19 @@ eleventyNavigation:
     <!--                    LANDING                   -->
     <!-- ============================================ -->
 
-    <section id="int-hero">
-        <h1 id="home-h">Contact Us</h1>
-        <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
+    <div id="banner-1400">
+        <div class="cs-container">
+            <h1 class="cs-int-title">Contact Us</h1>
+        </div>
+        <!--Background Image-->
+        <picture class="cs-background">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/snowy-trees.jpg" | resize({width: 750, height: 820}) | webp %}">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/snowy-trees.jpg" | resize({width: 2018, height: 916, position: "attention" }) | webp %}">
+            <img decoding="async" src="{% getUrl "/assets/images/snowy-trees.jpg" | resize({width: 2018, height: 916, position: "attention" }) | webp %}" alt="Frosty line of trees" aria-hidden="true">
         </picture>
-    </section>
+    </div>
 
     <!-- ============================================ -->
     <!--                Contact Form                  -->
@@ -36,12 +40,14 @@ eleventyNavigation:
 
     <section id="cs-contact">
         <div class="cs-container">
-            <form id="cs-form" name="Contact Form" method="post">
+            <form id="cs-form" name="Contact Form" method="post" data-netlify="true" netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="Contact Form">
+                <p hidden><label>Leave this empty <input name="bot-field"></label></p>
                 <div class="cs-content">
                     <span class="cs-topper">Contact</span>
                     <h2 class="cs-title">Get in Touch</h2>
                     <p class="cs-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus elementum ullamcorper ipsum porttitor aliquam. Id magna urna ultrices odio pulvinar. Sed ut.
+                        Questions about passes, rentals, the sauna or trail conditions? Send us a message or give us a call.
                     </p>
                 </div>
                 <label>
@@ -50,11 +56,11 @@ eleventyNavigation:
                 </label>
                 <label>
                     Email
-                    <input required type="text" id="email" name="email" placeholder="Email">
+                    <input required type="email" id="email" name="email" placeholder="Email">
                 </label>
                 <label>
                     Phone
-                    <input required type="text" id="phone" name="phone" placeholder="Phone">
+                    <input type="tel" id="phone" name="phone" placeholder="Phone">
                 </label>
                 <label>
                     How Did You Find Us
@@ -67,30 +73,23 @@ eleventyNavigation:
                 <button class="cs-button-solid" type="submit">Submit Message</button>
             </form>
             <div class="cs-right-section">
-                <!--Email-->
-                <span class="cs-header">Email</span>
-                <a class="cs-link" href="mailto:{{client.email}}">{{client.email}}</a>
                 <!--Phone-->
                 <span class="cs-header">Phone</span>
                 <a class="cs-link" href="tel:{{client.phoneForTel}}">{{client.phoneFormatted}}</a>
                 <!--Address-->
                 <span class="cs-header">Address</span>
-                <a class="cs-link" href="{{client.address.mapLink}}">
-                    {{client.address.lineOne}},
-                    <br/>
-                    {{client.address.lineTwo}},
+                <a class="cs-link" href="{{client.address.mapLink}}" target="_blank">
+                    {{client.address.lineOne}}
                     <br/>
                     <span class="cs-block">
-                        {{client.address.city}}
-                        {{client.address.state}}
-                        {{client.address.zip}}
+                        {{client.address.city}}, {{client.address.state}} {{client.address.zip}}
                     </span>
                 </a>
 
                 <!-- Background Image-->
                 <picture class="cs-bg-picture">
-                    <source media="(min-width: 601px)" srcset="/assets/images/skyscraper.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/skyscraper.jpg" alt="building" loading="lazy" width="2500" height="1667">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/trail-3.jpg" | resize({width: 800}) | webp %}">
+                    <img aria-hidden="true" decoding="async" src="{% getUrl "/assets/images/trail-3.jpg" | resize({width: 800}) | webp %}" alt="" loading="lazy">
                 </picture>
 
             </div>

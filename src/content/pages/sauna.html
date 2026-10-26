@@ -1,6 +1,6 @@
 ---
-title: "Support Blueberry Lake XC | Trail Improvements & Accessibility Programs"
-description: "Help support our family-owned ski center with sustainer passes and donations for trail improvements. Free skiing program for qualifying families. 40+ years in Vermont's Mad River Valley."
+title: "Trailside Sauna at Blueberry Lake XC | Warren, VT"
+description: "Eight-person trailside sauna at Blueberry Lake XC in Warren, VT. Monthly and season sauna passes, with discounted add-on pricing for season ski pass holders."
 permalink: '/sauna/'
 ---
 
@@ -71,75 +71,49 @@ permalink: '/sauna/'
 <!--                  Pricing                     -->
 <!-- ============================================ -->
 
-<section id="pricing-1386">
+<section id="sauna-passes" class="cs-passes">
     <picture class="cs-bg">
         <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/topo.png" | resize({width: 375, height: 667}) | webp({quality: 50}) %}">
         <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/topo.png" | resize({width: 1415, height: 722}) | webp %}">
-        <img decoding="async" src="{% getUrl "/assets/images/topo.png" | resize({width: 1415, height: 722}) | webp %}" alt="pancake" aria-hidden="true">
+        <img decoding="async" src="{% getUrl "/assets/images/topo.png" | resize({width: 1415, height: 722}) | webp %}" alt="" aria-hidden="true">
     </picture>
     <div class="cs-container">
-        <ul class="cs-card-group">
+        <div class="cs-content">
+            <span class="cs-topper">Pricing</span>
+            <h2 class="cs-title">Sauna Passes &amp; Sessions</h2>
+            <p class="cs-text">
+                <strong>Have a season ski pass?</strong> You're eligible for our discounted sauna add-on pricing on monthly and season sauna passes.
+            </p>
+        </div>
+        <ul class="cs-card-group cs-three">
             <li class="cs-item">
-                <div class="cs-flex">
-                    <span class="cs-package">Sauna Monthly <br>Add-On</span>
-                    <span class="cs-price">
-                        $75
-                        <span class="cs-duration">/month</span>
-                    </span>
-                </div>
-                <div class="cs-info">
-                    <a href="https://square.link/u/3Y57RCK0" target="_blank" class="cs-button-transparent">Buy Now!</a>
+                <h3 class="cs-package">Monthly</h3>
+                <span class="cs-age">Unlimited use for 30 days</span>
+                <span class="cs-price">$125<span class="cs-duration">/month</span></span>
+                <a href="https://square.link/u/yXOt1XqN" target="_blank" class="cs-button-solid" aria-label="Buy Monthly Sauna Pass, $125">Buy Now</a>
+                <div class="cs-sustainer">
+                    <span class="cs-trail-tag">Ski pass holders</span>
+                    <a href="https://square.link/u/3Y57RCK0" target="_blank" class="cs-button-outline" aria-label="Buy Monthly Sauna Add-On for ski pass holders, $75">With Ski Pass &middot; $75</a>
+                    <span class="cs-sustainer-note">Save $50 with a season ski pass</span>
                 </div>
             </li>
             <li class="cs-item">
-                <div class="cs-flex">
-                    <span class="cs-package">Sauna Season <br> Add-On</span>
-                    <span class="cs-price">
-                        $200
-                        <span class="cs-duration">/person</span>
-                    </span>
-                </div>
-                <div class="cs-info">
-                    <a href="https://square.link/u/leOPHEbr" target="_blank" class="cs-button-transparent">Buy Now!</a>
-                </div>
-            </li>
-            <li class="cs-item">
-                <div class="cs-flex">
-                    <span class="cs-package">Single Session <br> Sauna</span>
-                    <span class="cs-price">
-                        $25
-                        <span class="cs-duration">/45 minutes</span>
-                    </span>
-                </div>
-                <div class="cs-info">
-                    <a href="/"" target="_blank" class="cs-button-transparent">Buy Now!</a>
-                </div>
-            </li>
-        </ul>
-        <ul class="cs-card-group">
-            <li class="cs-item">
-                <div class="cs-flex">
-                    <span class="cs-package">Sauna Monthly <br>(without ski pass)</span>
-                    <span class="cs-price">
-                        $125
-                        <span class="cs-duration">/month</span>
-                    </span>
-                </div>
-                <div class="cs-info">
-                    <a href="https://square.link/u/yXOt1XqN" target="_blank" class="cs-button-transparent">Buy Now!</a>
+                <h3 class="cs-package">Season</h3>
+                <span class="cs-age">The full sauna season</span>
+                <span class="cs-price">$325<span class="cs-duration">/person</span></span>
+                <a href="https://square.link/u/kEXmYrM2" target="_blank" class="cs-button-solid" aria-label="Buy Season Sauna Pass, $325">Buy Now</a>
+                <div class="cs-sustainer">
+                    <span class="cs-trail-tag">Ski pass holders</span>
+                    <a href="https://square.link/u/leOPHEbr" target="_blank" class="cs-button-outline" aria-label="Buy Season Sauna Add-On for ski pass holders, $200">With Ski Pass &middot; $200</a>
+                    <span class="cs-sustainer-note">Save $125 with a season ski pass</span>
                 </div>
             </li>
             <li class="cs-item">
-                <div class="cs-flex">
-                    <span class="cs-package">Sauna Season <br>(without ski pass)</span>
-                    <span class="cs-price">
-                        $325
-                        <span class="cs-duration">/person</span>
-                    </span>
-                </div>
-                <div class="cs-info">
-                    <a href="https://square.link/u/kEXmYrM2" target="_blank" class="cs-button-transparent">Buy Now!</a>
-                </div>
+                <h3 class="cs-package">Single Session</h3>
+                <span class="cs-age">In person or by phone</span>
+                <span class="cs-price">$25<span class="cs-duration">/45 minutes</span></span>
+                <a href="tel:{{ client.phoneForTel }}" class="cs-button-solid">Call to Book</a>
+                <span class="cs-sustainer-note cs-call-note">{{ client.phoneFormatted }}</span>
             </li>
         </ul>
     </div>
